@@ -2,18 +2,18 @@ package models;
 
 import interfaces.IControl;
 
-public class ExerciseControl implements IControl {
+public class RankControl implements IControl {
 
 	@Override
 	public String getId() {
 		// TODO Auto-generated method stub
-		return "This output represents: ExerciseControlID";
+		return "This output represents: RankControlID";
 	}
 
 	@Override
 	public String getLayout() {
 		// TODO Auto-generated method stub
-		return "This output represents: ExerciseControlLayout";
+		return "This output represents: RankControlLayout";
 	}
 
 }

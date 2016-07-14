@@ -1,6 +1,6 @@
 package interfaces;
 
 public interface IControl {
-	void getId();
-	void getLayout();
+	String getId();
+	String getLayout();
 }
