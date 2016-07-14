@@ -1,5 +1,7 @@
 package abstractfactory;
 
+import java.util.ArrayList;
+
 import factories.ExerciseFactory;
 import factories.MultiplierFactory;
 import factories.RankFactory;
@@ -16,27 +18,26 @@ public class Main {
 		
 		eFactory = new ExerciseFactory();
 		IControl exerciseControl = eFactory.CreateControl();
-		
-		System.out.println(exerciseControl.getId());
-		System.out.println(exerciseControl.getLayout());
-		
-		
+			
 		IControlFactory mFactory;
 		
 		mFactory = new MultiplierFactory();
 		IControl multiplierControl = mFactory.CreateControl();
-		
-		System.out.println(multiplierControl.getId());
-		System.out.println(multiplierControl.getLayout());
-		
 		
 		IControlFactory rFactory;
 		
 		rFactory = new RankFactory();
 		IControl rankControl = rFactory.CreateControl();
 		
-		System.out.println(rankControl.getId());
-		System.out.println(rankControl.getLayout());
+		ArrayList<IControl> controls = new ArrayList<>();
+		controls.add(exerciseControl);
+		controls.add(multiplierControl);
+		controls.add(rankControl);
+		
+		for (IControl control : controls) {
+			System.out.println(control.getId());
+			System.out.println(control.getLayout());
+		}
 		
 
 	}
